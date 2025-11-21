@@ -3,6 +3,10 @@ from transformers import pipeline
 import torch
 import os
 import boto3
+import os
+os.environ["AWS_ACCESS_KEY_ID"] = st.secrets["AWS_ACCESS_KEY_ID"]
+os.environ["AWS_SECRET_ACCESS_KEY"] = st.secrets["AWS_SECRET_ACCESS_KEY"]
+os.environ["AWS_DEFAULT_REGION"] = st.secrets["AWS_DEFAULT_REGION"]
 
 bucket_name = "agnishpaul"
 local_path = 'tinybert-sentiment-analysis'
